@@ -1,18 +1,21 @@
 package com.codingShuttle.Spring.Boot.MVC.and.RESTful.APIs.demo.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 
 public class EmployeeDTO {
     private Long id;
     private String name;
     private String email;
-    private Integer age ;
+    private Integer age;
     private LocalDate dateOfJoining;
+    @JsonProperty("isActive")
     private Boolean isActive;
 
     //Default Constructor
-    public EmployeeDTO(){
+    public EmployeeDTO() {
 
     }
 
